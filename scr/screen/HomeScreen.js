@@ -8,7 +8,7 @@ const HomeScreen = ({ navigation }) => {
             <View style={{ marginTop: 50 }}>
                 <TouchableOpacity
                     style={{ ...styles.button, ...{backgroundColor: "#b7094c"} }}
-                    onPress={() => navigation.navigate("Image")}
+                    onPress={() => navigation.navigate("MemberScreen")}
                 >
                     <Text style={{ fontSize: 20, fontWeight: "bold", color: "#fffcf2" }}>Members</Text>
                 </TouchableOpacity>
