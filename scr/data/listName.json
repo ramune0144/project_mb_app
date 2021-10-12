@@ -1,7 +1,7 @@
 {
     "Member" : [
     {"Firstname": "นฤพล","Lastname": "เสาชัย","ID": "6221601169","image":""},
-    {"Firstname": "ศักยสรณ์","Lastname": "นางาม","ID": "6221608147","image":""},
-    {"Firstname": "ภาคิน","Lastname": "วันเปี่ยม","ID": "6221600000","image":""}
+    {"Firstname": "ศักยสรณ์","Lastname": "นางาม","ID": "6221608147","image":"../image/picp.jpg"},
+    {"Firstname": "ภาคิน","Lastname": "วันเปี่ยม","ID": "6221600000","image":"../image/picpeat.jpg"}
     ]
 }
