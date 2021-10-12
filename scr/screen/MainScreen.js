@@ -2,7 +2,7 @@ import React from "react"
 import { View,  StyleSheet} from "react-native"
 import color from "../constant/color";
 import ButtonMain from "../component/ButtonMain"
-const HomeScreen = () => {
+const MainScreen = () => {
 
     return (
         <View style={{ backgroundColor: color.primaryColor, flex: 1 }}>
@@ -16,7 +16,7 @@ const HomeScreen = () => {
     );
 }
 
-export default HomeScreen;
+export default MainScreen;
 
 
 

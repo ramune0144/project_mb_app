@@ -13,11 +13,7 @@ const ButtonMain = ({ name, color, navigate_name }) => {
 export default ButtonMain
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        paddingHorizontal: 10
-    },
+    
     button: {
         alignItems: "center",
 
@@ -28,8 +24,5 @@ const styles = StyleSheet.create({
         marginHorizontal: 5
 
     },
-    countContainer: {
-        alignItems: "center",
-        padding: 10
-    }
+    
 });

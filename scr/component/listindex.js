@@ -41,18 +41,7 @@ const style = StyleSheet.create({
 
 
     },
-    TextStyle: {
-        fontSize: 50,
-        fontWeight: "bold"
-
-    }
-    ,
-    viewstyle: {
-        flex: 1,
-        alignItems: "center",
-        paddingTop: 20,
-    }
-    ,
+    
     liststyle: {
         flex: 1,
         alignItems: "center",
@@ -70,14 +59,7 @@ const style = StyleSheet.create({
 
 
     },
-    teltitle: {
-
-        backgroundColor: "#FFE8F9",
-        margin: 1,
-        width: 200,
-
-
-    },
+   
     bord: {
         borderWidth: 5,
         borderRadius: 90,
@@ -90,10 +72,7 @@ const style = StyleSheet.create({
         fontWeight: "bold",
         color: "white"
     },
-    textcon: {
-        marginLeft: 10,
-    }
-    ,
+    
     textbox: {
         justifyContent: "space-between"
     }
