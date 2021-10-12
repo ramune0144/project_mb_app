@@ -12,13 +12,21 @@ const Stack = createStackNavigator()
 
 // }
 
+const defaultStackNavOption={
+  headerStyle: { backgroundColor: Colors.primaryColor },
+  headerTintColor: "white",
 
+
+}
 
 function App() {
 
   return (
 
-    <NavigationContainer>
+    <NavigationContainer
+    screenOptions={
+      defaultStackNavOption
+  }>
       <Stack.Navigator initialRouteName="Home"
        >
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}></Stack.Screen>
