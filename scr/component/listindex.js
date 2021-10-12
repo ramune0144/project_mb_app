@@ -36,7 +36,7 @@ const style = StyleSheet.create({
     image: {
         width: 70,
         height: 70,
-        padding: 10,
+        padding: 40,
         borderRadius: 90,
 
 
@@ -57,13 +57,14 @@ const style = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         flexDirection: "row",
-        paddingTop: 20,
+        paddingTop: 10,
+        
     },
 
     listtitle: {
         padding: 10,
-        backgroundColor: "#cce2cb",
-        margin: 3,
+        backgroundColor: "#b7094c",
+        margin: 6,
         width: 400,
         fontSize: 15,
 
@@ -78,15 +79,16 @@ const style = StyleSheet.create({
 
     },
     bord: {
-        borderWidth: 3,
+        borderWidth: 5,
         borderRadius: 90,
-        borderColor: "#817D80"
+        borderColor: "#5c4d7d"
 
     },
     name: {
-        marginLeft:9,    
+        marginLeft:12,    
         fontSize: 20,
         fontWeight: "bold",
+        color: "white"
     },
     textcon: {
         marginLeft: 10,

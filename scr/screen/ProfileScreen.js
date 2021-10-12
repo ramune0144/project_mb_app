@@ -7,13 +7,12 @@ const ProfileScreen = ({route}) => {
     return (
         <View style={{ backgroundColor: color.accentColor, flex: 1 }}>
            <Image source={{ uri: item.data.image }} style={style.image}/>
-           <Text>{item.data.Firstname}</Text>
-           <Text>{item.data.Lastname}</Text>
-           <Text>{item.data.ID}</Text>
-           <Text>{item.data.Nickname}</Text>
-           <Text>{item.data.Tell}</Text>
-           <Text>{item.data.GroupBlood}</Text>
-           <Text>{item.data.Age}</Text>
+           <Text style={style.TextStyle}>{item.data.Firstname}  {item.data.Lastname}</Text>
+           <Text style={style.info}>รหัสนิสิต   {item.data.ID}</Text>
+           <Text style={style.info}>ชื่อเล่น      {item.data.Nickname}</Text>
+           <Text style={style.info}>เบอร์โทร   {item.data.Tell}</Text>
+           <Text style={style.info}>กรุ๊ปเลือด   {item.data.GroupBlood}</Text>
+           <Text style={style.info}>อายุ            {item.data.Age}</Text>
         </View>
 
     );
@@ -21,16 +20,20 @@ const ProfileScreen = ({route}) => {
 
 const style = StyleSheet.create({
     image: {
-        width: 70,
-        height: 70,
+        width: 170,
+        height: 170,
+        alignSelf: "center",
+        marginTop: 30,
         padding: 10,
-        borderRadius: 90,
-
+        borderRadius: 40,
 
     },
     TextStyle: {
-        fontSize: 50,
-        fontWeight: "bold"
+        marginTop: 4,
+        fontSize: 30,
+        fontWeight: "bold",
+        alignSelf: "center",
+        color: "white"
 
     }
     ,
@@ -70,10 +73,12 @@ const style = StyleSheet.create({
         borderColor: "#817D80"
 
     },
-    name: {
-        marginLeft:9,    
+    info: {
+        marginLeft:70,    
         fontSize: 20,
         fontWeight: "bold",
+        color: "white",
+        marginTop: 20
     },
     textcon: {
         marginLeft: 10,
