@@ -13,7 +13,7 @@ const ProfileScreen = ({ route }) => {
       <Text style={style.info}>🎫 รหัสนิสิต {item.data.ID}</Text>
       <Text style={style.info}>👦🏻 ชื่อเล่น {item.data.Nickname}</Text>
       <Text style={style.info}>📱 เบอร์โทร {item.data.Tell}</Text>
-      <Text style={style.info}>🩸 กรุ๊ปเลือด {item.data.GroupBlood}</Text>
+      <Text style={style.info}>💉 กรุ๊ปเลือด {item.data.GroupBlood}</Text>
       <Text style={style.info}>🧓🏻 อายุ {item.data.Age}</Text>
     </View>
   );
