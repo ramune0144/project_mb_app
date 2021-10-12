@@ -1,20 +1,20 @@
 import React from "react"
 import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from "react-native"
 import data from "../data/listName.json"
-
-const MemberScreen = ({ navigation }) => {
+import color from "../constant/color";
+const MemberScreen = ({navigation}) => {
 
     const contacts = data.Member;
 
     return (
-        <View style={style.viewstyle}>
-            <Text style={style.TextStyle}>contacts Screen</Text>
+        <View style={{ ...style.viewstyle, ...{ backgroundColor: color.accentColor} }}>
+            
             <FlatList keyExtractor={friend => friend.ID}
                 data={contacts} renderItem={({ item }) => {
                     return (
                         <TouchableOpacity
 
-                            onPress={() => navigation.navigate("Home")}
+                            onPress={() => navigation.navigate("ProfileScreen",{ data: item })}
                         >
                             <View style={style.listtitle}>
                                 <View style={style.liststyle}>
@@ -29,8 +29,9 @@ const MemberScreen = ({ navigation }) => {
 
                                     <View style={style.textbox}>
 
-                                        <Text style={style.name}> {item.Firstname} </Text>
-                                        <Text style={style.textcon}>{item.email}  {item.Lastname}</Text>
+                                        <Text style={style.name}>ชื่อ {item.Firstname}  </Text>
+                                        <Text style={style.name}>นามสกุล {item.Lastname}  </Text>
+                                        <Text style={style.name}>ID {item.ID}  </Text>
                                     </View>
                                 </View>
 
@@ -96,7 +97,7 @@ const style = StyleSheet.create({
 
     },
     name: {
-
+        marginLeft:9,    
         fontSize: 20,
         fontWeight: "bold",
     },

@@ -1,8 +1,8 @@
 import React from "react"
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
+import { View,  StyleSheet} from "react-native"
 import color from "../constant/color";
 import ButtonMain from "../component/ButtonMain"
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
 
     return (
         <View style={{ backgroundColor: color.primaryColor, flex: 1 }}>
@@ -16,27 +16,6 @@ const HomeScreen = ({ navigation }) => {
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        paddingHorizontal: 10
-    },
-    button: {
-        alignItems: "center",
-
-        padding: 30
-        ,
-        borderRadius: 20,
-        marginTop: 8,
-        marginHorizontal: 5
-
-    },
-    countContainer: {
-        alignItems: "center",
-        padding: 10
-    }
-});
 export default HomeScreen;
 
 

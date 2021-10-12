@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './scr/screen/HomeScreen';
 import MemberScreen from './scr/screen/MemberScreen';
-import color from './scr/constant/color';
+import ProfileScreen from './scr/screen/ProfileScreen';
 import * as React from "react";
 const Stack = createStackNavigator()
 // const defaultStackNavOption={
@@ -22,7 +22,8 @@ function App() {
       <Stack.Navigator initialRouteName="Home"
        >
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}></Stack.Screen>
-        <Stack.Screen name="MemberScreen" component={MemberScreen} options={{animationEnabled: true}}></Stack.Screen>
+        <Stack.Screen name="MemberScreen" component={MemberScreen} ></Stack.Screen>
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen} ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
 
