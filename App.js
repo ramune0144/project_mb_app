@@ -4,31 +4,28 @@ import HomeScreen from './scr/screen/HomeScreen';
 import MemberScreen from './scr/screen/MemberScreen';
 import ProfileScreen from './scr/screen/ProfileScreen';
 import * as React from "react";
+import color from './scr/constant/color';
 const Stack = createStackNavigator()
-// const defaultStackNavOption={
-//   headerStyle: { backgroundColor: color.primaryColor },
-//   headerTintColor: "white",
-
-
-// }
-
 const defaultStackNavOption={
-  headerStyle: { backgroundColor: Colors.primaryColor },
+  headerStyle: { backgroundColor: color.primaryColor },
   headerTintColor: "white",
 
 
 }
+
+
 
 function App() {
 
   return (
 
     <NavigationContainer
-    screenOptions={
-      defaultStackNavOption
-  }>
+>
       <Stack.Navigator initialRouteName="Home"
-       >
+          screenOptions={
+            defaultStackNavOption
+        }
+      >
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}></Stack.Screen>
         <Stack.Screen name="MemberScreen" component={MemberScreen} ></Stack.Screen>
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} ></Stack.Screen>
