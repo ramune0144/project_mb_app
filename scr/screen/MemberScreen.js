@@ -1,42 +1,54 @@
 import React from "react"
-import { View, Text, StyleSheet, FlatList, Image } from "react-native"
+import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from "react-native"
 import data from "../data/listName.json"
-const contactScreen = () => {
 
-    const contacts = data.contacts;
+const MemberScreen = ({ navigation }) => {
+
+    const contacts = data.Member;
+
     return (
         <View style={style.viewstyle}>
             <Text style={style.TextStyle}>contacts Screen</Text>
-            <FlatList keyExtractor={friend => friend.id}
+            <FlatList keyExtractor={friend => friend.ID}
                 data={contacts} renderItem={({ item }) => {
                     return (
-                        <View style={style.listtitle}>
-                            <View style={style.liststyle}>
-                               
-                                <View style={style.bord}  >
-                                    <Image source={require(item.image)} style={style.image} />
+                        <TouchableOpacity
+
+                            onPress={() => navigation.navigate("Home")}
+                        >
+                            <View style={style.listtitle}>
+                                <View style={style.liststyle}>
+
+                                    <View style={style.bord}  >
+
+                                        <Image source={{ uri: item.image }} style={style.image} />
+
+
+                                    </View>
+
+
+                                    <View style={style.textbox}>
+
+                                        <Text style={style.name}> {item.Firstname} </Text>
+                                        <Text style={style.textcon}>{item.email}  {item.Lastname}</Text>
+                                    </View>
                                 </View>
-                                
-                                <View style = {style.textbox}>
-                                <Text style = {style.name}> {item.name} </Text>
-                                <Text style = {style.textcon}>{item.email}  {item.phone}</Text>
-                                </View>
+
                             </View>
-                            
-                        </View>
+                        </TouchableOpacity>
                     );
                 }} />
         </View>
 
     );
 }
-export default contactScreen;
+export default MemberScreen;
 
 const style = StyleSheet.create({
     image: {
-        width: 25,
-        height: 25,
-        margin: 25,
+        width: 70,
+        height: 70,
+        padding: 10,
         borderRadius: 90,
 
 
@@ -70,7 +82,7 @@ const style = StyleSheet.create({
 
     },
     teltitle: {
-     
+
         backgroundColor: "#FFE8F9",
         margin: 1,
         width: 200,
@@ -88,11 +100,11 @@ const style = StyleSheet.create({
         fontSize: 20,
         fontWeight: "bold",
     },
-    textcon:{
-        marginLeft:10,
+    textcon: {
+        marginLeft: 10,
     }
     ,
-    textbox:{
-        justifyContent:"space-between"
+    textbox: {
+        justifyContent: "space-between"
     }
 });
